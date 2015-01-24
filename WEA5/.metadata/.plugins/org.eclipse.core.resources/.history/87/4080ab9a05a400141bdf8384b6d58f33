@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	template="Master.xhtml">
+	<ui:define name="content">
+		<h:panelGroup rendered="#{webShop.cartEmpty}">
+			<p>No books in cart. Please add some books to your cart first.</p>
+		</h:panelGroup>
+		<h:panelGroup rendered="#{!webShop.cartEmpty}">
+		<h2>Check-out</h2>
+		<table>
+			<tr>
+				<th>Card number:</th>
+				<td><h:inputText value="#{checkOutData.cardNumber}">
+						<f:validateRequired />
+						<f:validateLength minimum="16" maximum="16" />
+					</h:inputText></td>
+			</tr>
+			<tr>
+				<th>Expiry date:</th>
+				<td><h:inputText value="#{checkOutData.expiryDate}"
+						requried="true">
+						<f:convertDateTime pattern="MM/yyyy" />
+					</h:inputText></td>
+			</tr>
+		</table>
+		<p>
+			<h:commandButton action="#{webShop.checkOut(checkOutData)}"
+				value="Place oder" />
+		</p>
+		</h:panelGroup>
+	</ui:define>
+</ui:composition>

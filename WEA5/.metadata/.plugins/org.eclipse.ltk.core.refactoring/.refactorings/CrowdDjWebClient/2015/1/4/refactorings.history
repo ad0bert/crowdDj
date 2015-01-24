@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Move &apos;CheckOut.xhtml&apos; to &apos;WebContent&apos;" description="Move &apos;CheckOut.xhtml&apos; to &apos;WebContent&apos;" destination="WebContent" element1="WebContent/WEB-INF/CheckOut.xhtml" element2="WebContent/WEB-INF/CheckOutSummary.xhtml" element3="WebContent/WEB-INF/Home.xhtml" element4="WebContent/WEB-INF/List.xhtml" element5="WebContent/WEB-INF/Master.xhtml" flags="7" id="org.eclipse.ltk.core.refactoring.move.resources" resources="5" stamp="1422130470643" updateReferences="true"/>
+</session>

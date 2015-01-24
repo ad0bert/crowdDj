@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+<title>WEA5 Book Shop</title>
+</head>
+<h:body>
+	<h:form>
+		<h1>WEA5 Book Shop</h1>
+		<p>
+			<h:link outcome="Home">Home</h:link>
+			<h:link outcome="List">List of books</h:link>
+			<h:link outcome="CheckOut">Check-out</h:link>
+
+		</p>
+		<hr />
+		<ui:insert name="content" />
+		<hr />
+		<p>Page generated at: #{webShop.date}</p>
+	</h:form>
+</h:body>
+</html>

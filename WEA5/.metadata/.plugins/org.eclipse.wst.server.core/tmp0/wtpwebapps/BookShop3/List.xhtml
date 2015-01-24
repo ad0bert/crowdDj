@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core" template="Master.xhtml">
+	<ui:define name="content">
+		<h2>List of Books</h2>
+		<h:dataTable value="#{webShop.books}" var="book">
+			<h:column>#{book.author}</h:column>
+			<h:column>#{book.title}</h:column>
+			<h:column>#{book.price}</h:column>
+			<h:column>
+				<h:commandButton action="{webShop.addToCart(book.id)}"
+					value="Add to cart" rendered="#{!webShop.isBookInCart(book.id)}" />
+				<h:commandButton action="{webShop.removeFromCart(book.id)}"
+					value="Remove from cart" rendered="#{webShop.isBookInCart(book.id)}" />
+			</h:column>
+		</h:dataTable>
+	</ui:define>
+</ui:composition>
